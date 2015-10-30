@@ -1,0 +1,34 @@
+{
+  "name": "nodeapp",
+  "version": "0.0.1",
+  "description": "First node app",
+  "main": "Long description here",
+  "dependencies": {
+    "forever": "^0.14.1",
+    "http-server": "^0.7.5",
+    "express": "~3.2",
+    "ejs": "~0.8",
+    "markdown": "~0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<...>/<...>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<...>/<...>/issues"
+  },
+  "author": [
+    "Hugo lopez <hugo.lpz@gmail.com> "
+  ],
+  "keywords": [
+    "test",
+    "minimal"
+  ],
+  "scripts": {
+    "start": "node ./node_modules/.bin/forever ./node_modules/.bin/http-server"
+  },
+  "license": "PD",
+  "devDependencies": {
+    "csscritic": "^1.2.0"
+  }
+}

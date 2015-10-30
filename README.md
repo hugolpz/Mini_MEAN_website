@@ -45,6 +45,7 @@ chromium-browser http://0.0.0.0:3000
 sudo apt-get install git make  # tools needed for install
 git clone https://github.com/WikimapsAtlas/make-modules.git  #get code
 cd ./make-modules
+```
 
 ## API
 Commonly used:
