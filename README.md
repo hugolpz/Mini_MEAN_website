@@ -3,9 +3,7 @@ STEP 1: This repository make a *minimal (M)E(A)N website*. We first use `NodesJS
 
 STEP 2: Objective is to provide a *minimal ME(A)N website*. A MongoDB CRUD API (RESTful API) is added, from which the website queries json data to feed the webpage.
 
-###
-
-Webpages available:
+### Website's tree
 ```
  + home.html
  +-- gallery.hml
@@ -14,8 +12,7 @@ Webpages available:
  +-- [error 404]
 ```
 
-Webpages are built as follow.
-
+### Website's shape
 ```
 +---------------------------------+
 |            header               |
@@ -30,12 +27,14 @@ Webpages are built as follow.
 +---------------------------------+
 ```
 
+**Screenshot**
 <img src="http://i.stack.imgur.com/kaJH3.png" width="300" float="center">
 
 ## Run
+Runs in two distinct terminales
 ```
-node app.js
-chromium-browser http://0.0.0.0:3000
+node app.js                            # runs the app & gives you the urls
+chromium-browser http://0.0.0.0:3000   # opens the url (website's home)
 ```
 
 
@@ -43,8 +42,9 @@ chromium-browser http://0.0.0.0:3000
 **On Linux Ubuntu**, run the following:
 ```shell
 sudo apt-get install git make  # tools needed for install
-git clone https://github.com/WikimapsAtlas/make-modules.git  #get code
-cd ./make-modules
+git clone https://github.com/hugolpz/Mini_MEAN_website.git  #get code
+cd ./Mini_MEAN_website
+npm install
 ```
 
 ## API
