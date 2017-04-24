@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
 			validityLang2 = req.params.lang2.length <=3;
 	res.setHeader('Content-Type', 'text/html');
 	if( validityLang1 && validityLang2) {
-		res.render('layout_word.ejs', { pageTitle: "Word page", lang2: req.params.lang2 , lang1: req.params.lang1 , word: req.params.word } ); }
+		res.render('layout_word.ejs', { pageTitle: "Word page", lang2: req.params.lang2 , lang1: req.params.lang1 , word: req.params.word, "session": session } ); }
 	else {
 		res.render('layout_404.ejs', session ); // Error => to upgrade into: Error wrong languages query
 	}

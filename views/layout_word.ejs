@@ -1,21 +1,22 @@
 <html>
-    <% include meta %>
- <body>
-    <div id="header">
-         <% include header %>
+  <% include meta %>
+<body>
+  <div id="header">
+     <% include header %>
+  </div>
+  <div class="row">
+    <div id="bodyLeft" class="col-md-3">
     </div>
-    <div class="row">
-        <div id="bodyLeft" class="col-md-3">
-        </div>
-        <div id="bodyCenter" class="col-md-6">
-            <% include word/body %>
-        </div>
-        <div id="bodyRight" class="col-md-3">
-            <% include word/body %>
-        </div>
+    <div id="bodyCenter" class="col-md-6">
+      <% include _word %>
     </div>
-    <div id="footer">
-        <% include footer %>
+    <div id="bodyRight" class="col-md-3">
+      <% include _userpage %>
+      <% include _session %>
     </div>
- </body>
+  </div>
+  <div id="footer">
+    <% include footer %>
+  </div>
+</body>
 </html>
