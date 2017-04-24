@@ -34,7 +34,9 @@ STEP 2: Objective is to provide a *minimal ME(A)N website*. A MongoDB CRUD API (
 Runs in two distinct terminales
 ```
 node app.js                            # runs the app & gives you the urls
-chromium-browser http://0.0.0.0:3000   # opens the url (website's home)
+chromium-browser http://0.0.0.0:3000   # opens the url (website's home)*
+chromium-browser http://localhost:3000/word/cmn/fra/中文維基百科
+chromium-browser http://localhost:3000/user/Yug
 ```
 
 
