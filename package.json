@@ -6,7 +6,7 @@
   "dependencies": {
     "forever": "^0.14.1",
     "http-server": "^0.7.5",
-    "express": "~3.2",
+    "express": "~4.17",
     "ejs": "~2.5.5",
     "markdown": "~0.4"
   },
