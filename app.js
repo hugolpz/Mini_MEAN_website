@@ -17,7 +17,14 @@ var session = {
 app.get('/', function (req, res) {
 	res.setHeader('Content-Type', 'text/html');
 //	res.write('Hello World !!!');
-	res.render('layout_home.ejs', session )
+	res.render('layout_home.ejs', {
+		pageTitle: session.page,
+		userpage: session.user.name || "Please login",
+		lang1: session.lang1,
+		lang2: session.lang2,
+		word: session.word,
+		"session": session
+	} )
 	res.end;
 })
 // WORDS
@@ -26,9 +33,9 @@ app.get('/', function (req, res) {
 			validityLang2 = req.params.lang2.length <=3;
 	res.setHeader('Content-Type', 'text/html');
 	if( validityLang1 && validityLang2) {
-		res.render('layout_word.ejs', { pageTitle: "Word page", lang2: req.params.lang2 , lang1: req.params.lang1 , word: req.params.word, "session": session } ); }
+		res.render('layout_word.ejs', { pageTitle: "Word page", lang2: req.params.lang2 , lang1: req.params.lang1 , word: req.params.word, userpage: session.user.name || "Please login", "session": session } ); }
 	else {
-		res.render('layout_404.ejs', session ); // Error => to upgrade into: Error wrong languages query
+		res.render('layout_404.ejs', { pageTitle: "Error 404", user: session.user, "session": session } ); // Error => to upgrade into: Error wrong languages query
 	}
 	res.end;
 })
@@ -51,7 +58,7 @@ app.get('/', function (req, res) {
 .use(express.static('public'))
 .use(function(req, res, next){
 	res.setHeader('Content-Type', 'text/html');
-	res.render('layout_404.ejs', { pageTitle: "Error 404", "session": session } );
+	res.render('layout_404.ejs', { pageTitle: "Error 404", user: session.user, "session": session } );
 	console.log('Request on: …/test/');
 });
 
